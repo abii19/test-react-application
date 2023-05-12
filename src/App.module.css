@@ -1,0 +1,12 @@
+.nav_brand {
+  font-size: 40px;
+  font-weight: 600;
+}
+.nav_link {
+  font-size: 20px;
+  font-weight: 500;
+  color: cadetblue;
+}
+.nav_link:hover {
+  color: green;
+}
