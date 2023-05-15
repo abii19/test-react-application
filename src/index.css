@@ -16,3 +16,20 @@ ul.nav-lists {
   gap: 8px;
   list-style: none;
 }
+
+.facebook-icon {
+  width: 40px;
+  height: 40px;
+  color: red;
+}
+.facebook-icon:hover {
+  color: green;
+}
+.twitter-icon {
+  width: 40px;
+  height: 40px;
+  color: skyblue;
+}
+.twitter-icon:hover {
+  color: blue;
+}
