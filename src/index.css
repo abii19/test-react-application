@@ -33,3 +33,16 @@ ul.nav-lists {
 .twitter-icon:hover {
   color: blue;
 }
+
+.button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: rgb(232, 232, 232);
+  font-size: 16px;
+}
+.button.primary {
+  background: rgb(48, 170, 222);
+}
+.button.danger {
+  background: rgb(238, 114, 114);
+}
