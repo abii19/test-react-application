@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Button = (props) => {
-  const { type = "button", title, onClick, variant = "default" } = props;
+  const { type = "button", title, onClick, variant } = props;
 
   return (
     <button
