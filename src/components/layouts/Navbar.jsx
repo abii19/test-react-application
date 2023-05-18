@@ -37,6 +37,11 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+        <li>
+          <Link to="/hooks" className={`nav-link ${styles.nav_link}`}>
+            Hooks
+          </Link>
+        </li>
       </ul>
     </nav>
   );
