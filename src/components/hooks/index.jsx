@@ -1,4 +1,23 @@
 import React, { useState } from "react";
+import Accordian from "./Accordian";
+
+const accordians = [
+  {
+    title: "Title 1",
+    details:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto aspernatur facere delectus natus possimus exercitationem ratione, ipsum eveniet veniam cumque architecto sed ex dicta omnis accusantium quas rerum ipsam eligendi!"
+  },
+  {
+    title: "Title 2",
+    details:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto aspernatur facere delectus natus possimus exercitationem ratione, ipsum eveniet veniam cumque architecto sed ex dicta omnis accusantium quas rerum ipsam eligendi!"
+  },
+  {
+    title: "Title 3",
+    details:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto aspernatur facere delectus natus possimus exercitationem ratione, ipsum eveniet veniam cumque architecto sed ex dicta omnis accusantium quas rerum ipsam eligendi!"
+  }
+];
 
 const HooksPage = () => {
   const [values, setValues] = useState({
@@ -27,10 +46,11 @@ const HooksPage = () => {
     // console.log(name, email, age, password);
   };
 
+  const [show, setShow] = useState(null);
+
   return (
     <div className="mb-40">
       <h1 className="font-medium text-5xl mb-4">useState</h1>
-
       {/* Forms */}
       <div className="px-96">
         <form onSubmit={handleSubmit} className="flex flex-col mx-auto">
@@ -67,6 +87,21 @@ const HooksPage = () => {
           />
           <button type="">Submit</button>
         </form>
+      </div>
+
+      <div className="px-96">
+        {accordians.map((acc, index) => {
+          return (
+            <Accordian
+              key={`${acc.title}-${index}`}
+              index={index}
+              title={acc.title}
+              details={acc.details}
+              show={show}
+              setShow={setShow}
+            />
+          );
+        })}
       </div>
     </div>
   );
